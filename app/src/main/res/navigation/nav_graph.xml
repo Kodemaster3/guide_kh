@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.guide_app_kh.HomeFragment"
+        android:label="@string/home_fragment_label"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_theaterFragment"
+            app:destination="@id/theaterFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_restaurantFragment"
+            app:destination="@id/restaurantFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_parkFragment"
+            app:destination="@id/parkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.guide_app_kh.HistoryFragment"
+        android:label="@string/history_fragment_label"
+        tools:layout="@layout/fragment_history">
+        <action
+            android:id="@+id/action_historyFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parkFragment"
+        android:name="com.example.guide_app_kh.ParkFragment"
+        android:label="@string/park_fragment_label"
+        tools:layout="@layout/fragment_park">
+        <action
+            android:id="@+id/action_parkFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantFragment"
+        android:name="com.example.guide_app_kh.RestaurantFragment"
+        android:label="@string/restaurant_fragment_label"
+        tools:layout="@layout/fragment_restaurant">
+        <action
+            android:id="@+id/action_restaurantFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/theaterFragment"
+        android:name="com.example.guide_app_kh.TheaterFragment"
+        android:label="@string/theater_fragment_label"
+        tools:layout="@layout/fragment_theater">
+        <action
+            android:id="@+id/action_theaterFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>

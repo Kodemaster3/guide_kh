@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Kharkiv guide</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="home_fragment_label">Home</string>
+    <string name="restaurant_fragment_label">Restaurants</string>
+    <string name="park_fragment_label">Parks</string>
+    <string name="theater_fragment_label">Theaters</string>
+    <string name="history_fragment_label">History</string>
+
+    <string name="descriptionPhotoHome">Installation in the form of a giant coat of arms
+        of Kharkiv in the Shevchenko garden</string>
+
+    <string name="restaurants">Restaurants</string>
+    <string name="parks">Parks</string>
+    <string name="theaters">Theaters</string>
+    <string name="history">History</string>
+
+    <string name="previous">Previous</string>
+
+    <string name="home_fragment">Hello home fragment</string>
+    <string name="restaurant_fragment">Hello restaurant fragment</string>
+    <string name="park_fragment">Hello park fragment</string>
+    <string name="theater_fragment">Hello theater fragment</string>
+    <string name="history_fragment">Hello history fragment</string>
+
+    <string name="history_text">During World War II, Kharkiv was the site of several military engagements (see below). The city was captured by Nazi Germany on 24 October 1941. There was a disastrous Red Army offensive that failed to capture the city in May 1942. The city was successfully retaken by the Soviets on 16 February 1943.</string>
+
+</resources>
