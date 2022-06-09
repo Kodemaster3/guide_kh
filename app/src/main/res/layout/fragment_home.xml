@@ -20,6 +20,7 @@
         android:id="@+id/button_history"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:text="@string/history"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
