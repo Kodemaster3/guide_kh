@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    https://www.tripadvisor.co.uk/Restaurants-g295369-Kharkiv_Kharkiv_Oblast.html-->
+    <string-array name="restaurants">
+        <item>Chekhov Restaurant</item>
+        <item>Mindal Lounge Cafe</item>
+        <item>Sharikoff</item>
+        <item>44 Favorite Place</item>
+        <item>Gorcafe 1654</item>
+        <item>Chekhov Restaurant</item>
+        <item>Mindal Lounge Cafe</item>
+        <item>Sharikoff</item>
+        <item>Montana Restaurant</item>
+        <item>Pushka</item>
+        <item>Nasha Dacha</item>
+        <item>Mama Manana Kharkiv</item>
+        <item>Osteria Il Tartufo</item>
+        <item>Gdeburger</item>
+    </string-array>
+
+    <!--    https://www.tripadvisor.co.uk/Attractions-g2693125-Activities-c57-Kharkiv_Oblast.html-->
+    <string-array name="parks">
+        <item>Gorky Central Park of Culture and Leisure</item>
+        <item>Shevchenko City Garden</item>
+        <item>Kharkov Dolphinarium</item>
+        <item>Botanical Gardens</item>
+        <item>Feldman Ecopark</item>
+        <item>Kharkov Zoo</item>
+        <item>Sculptures Garden</item>
+        <item>Krasnokutsk Arboretum</item>
+        <item>Kirichenkova Krinitsa Spring</item>
+        <item>Parus-Maksi Recreation Complex</item>
+        <item>Cossack Mountain</item>
+        <item>Pokrovskiy City Park</item>
+        <item>Slobozhanskyi National Nature Park</item>
+        <item>Artem Culture and Recreation Park</item>
+        <item>Park Pozharnykh</item>
+    </string-array>
+
+    <string-array name="theaters">
+        <item>The Kharkov National Academic Opera and Ballet Theatre</item>
+        <item>Kharkiv Ukrainian Drama Theatre</item>
+        <item>Opera and Ballet theatre</item>
+        <item>V.A. Afanasyev Theatre of Puppets</item>
+        <item>Kharkiv Philharmonic Society</item>
+    </string-array>>
+</resources>

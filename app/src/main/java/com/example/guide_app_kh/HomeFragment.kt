@@ -32,6 +32,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        ///https://medium.com/nuances-of-programming/android-networking-%D0%B2-2019-retrofit-%D1%81-kotlin-coroutines-7254e68ca4a4
+
+        
+
+
         binding.buttonRestaurant.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_restaurantFragment)
         }

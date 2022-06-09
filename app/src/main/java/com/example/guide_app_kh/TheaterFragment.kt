@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.ListView
 import androidx.navigation.fragment.findNavController
 import com.example.guide_app_kh.databinding.FragmentTheaterBinding
 
@@ -32,6 +34,13 @@ class TheaterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val context = context as MainActivity
+        val listItem = resources.getStringArray(R.array.theaters)
+
+        val lv = context.findViewById(R.id.listItemTheather) as ListView
+        val adapter = ArrayAdapter(context, android.R.layout.simple_list_item_1, listItem)
+        lv.adapter = adapter
 
         binding.buttonHome.setOnClickListener {
             findNavController().navigate(R.id.action_theaterFragment_to_homeFragment)

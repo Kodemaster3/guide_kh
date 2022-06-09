@@ -8,11 +8,12 @@
 
     <TextView
         android:id="@+id/textview_second"
-        android:layout_width="356dp"
-        android:layout_height="115dp"
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="@string/restaurant_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_home"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,11 +21,38 @@
         android:id="@+id/button_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="@string/previous"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="344dp"-->
+<!--        android:layout_height="566dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/button_home"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.492"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textview_second"-->
+<!--        app:layout_constraintVertical_bias="0.0">-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recyView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+<!--    </LinearLayout>-->
+
+    <ListView
+        android:id="@+id/listItemTheather"
+        android:layout_width="263dp"
+        android:layout_height="519dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_home"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
+        app:layout_constraintTop_toBottomOf="@+id/textview_second" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
