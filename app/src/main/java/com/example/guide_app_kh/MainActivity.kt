@@ -1,20 +1,31 @@
 package com.example.guide_app_kh
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
 import com.example.guide_app_kh.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+
+    lateinit var tvIsConnected: TextView;
+    lateinit var tvResult: TextView;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +43,32 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+//        if(checkNetworkConnection()) {
+//            lifecycleScope.launch {
+//                val result = httpGet("http://google.com") /*hmkcode-api.appspot.com/rest/api/hello/Android*/
+//                tvResult.setText(result)
+//            }
+//        }
+
+        val retrofit: Retrofit = Retrofit.Builder()
+            .baseUrl("https://rawgit.com/startandroid/data/master/messages/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        val apiMessages: ApiMessages = retrofit.create(ApiMessages::class.java)
+
+        val messages: Call<List<Message>> = apiMessages.messages()
+
+        messages.enqueue(object : Callback<List<Message>> {
+            override fun onResponse(call: Call<List<Message>>, response: Response<List<Message>>) {
+                Log.i("sssss","response " + (response.body()?.size ?: 1))
+                response.body()?.get(0)?.let { Log.i("message 1", it.text.toString()) }
+            }
+            override fun onFailure(call: Call<List<Message>>, t: Throwable) {
+                Log.i("ssss", t.message.toString())
+            }
+        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
